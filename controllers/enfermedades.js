@@ -6,7 +6,7 @@
 // importamos el modelo de Enfermedads
 const Enfermedad = require('../models/Enfermedad')
 
-function crearEnfermedades() {
+function crearEnfermedad() {
   // Instanciaremos un nuevo Enfermedad utilizando la clase Enfermedad
   
 }
@@ -26,7 +26,7 @@ function eliminarEnfermedad() {
 
 // exportamos las funciones definidas
 module.exports = {
-  crearEnfermedades,
+  crearEnfermedad,
   obtenerEnfermedades,
   modificarEnfermedad,
   eliminarEnfermedad

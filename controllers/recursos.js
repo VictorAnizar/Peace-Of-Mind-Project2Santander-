@@ -6,7 +6,7 @@
 // importamos el modelo de Recursos
 const Recurso = require('../models/Recurso')
 
-function crearRecursos() {
+function crearRecurso() {
   // Instanciaremos un nuevo Recurso utilizando la clase Recurso
   
 }
@@ -26,7 +26,7 @@ function eliminarRecurso() {
 
 // exportamos las funciones definidas
 module.exports = {
-  crearRecursos,
+  crearRecurso,
   obtenerRecursos,
   modificarRecurso,
   eliminarRecurso

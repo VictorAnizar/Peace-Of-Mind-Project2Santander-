@@ -6,7 +6,7 @@
 // importamos el modelo de Articulos
 const Articulo = require('../models/Articulo')
 
-function crearArticulos() {
+function crearArticulo() {
   // Instanciaremos un nuevo Articulo utilizando la clase Articulo
   
 }
@@ -26,7 +26,7 @@ function eliminarArticulo() {
 
 // exportamos las funciones definidas
 module.exports = {
-  crearArticulos,
+  crearArticulo,
   obtenerArticulos,
   modificarArticulo,
   eliminarArticulo

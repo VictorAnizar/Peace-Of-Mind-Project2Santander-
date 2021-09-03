@@ -6,7 +6,7 @@
 // importamos el modelo de Comentarios
 const Comentario = require('../models/Comentario')
 
-function crearComentarios() {
+function crearComentario() {
   // Instanciaremos un nuevo Comentario utilizando la clase Comentario
   
 }
@@ -26,7 +26,7 @@ function eliminarComentario() {
 
 // exportamos las funciones definidas
 module.exports = {
-  crearComentarios,
+  crearComentario,
   obtenerComentarios,
   modificarComentario,
   eliminarComentario
