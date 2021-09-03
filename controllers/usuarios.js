@@ -21,7 +21,9 @@ function obtenerUsuarios(req,res) {
   // Simulando dos Usuarios y respondiendolos
     res.send(usuarios);
 }
-function obtenerUsuariosPorPropiedad(req, res){
+
+//Este metodo Buscar Un usuario por una propiedad en especifico. Devuelve la primer instancia de la búsqueda
+function obtenerUsuarioPorPropiedad(req, res){
   // se guardan en variables los valores mandados por url
   let valor = req.params.valor;
   let propiedad = req.params.propiedad;
@@ -54,7 +56,7 @@ function eliminarUsuario() {
 module.exports = {
   crearUsuario,
   obtenerUsuarios,
-  obtenerUsuariosPorPropiedad,
+  obtenerUsuarioPorPropiedad,
   modificarUsuario,
   eliminarUsuario
 }

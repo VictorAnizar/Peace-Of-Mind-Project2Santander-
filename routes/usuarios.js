@@ -4,13 +4,13 @@ const router = require('express').Router();
 const {
     crearUsuario,
     obtenerUsuarios,
-    obtenerUsuariosPorPropiedad,
+    obtenerUsuarioPorPropiedad,
     modificarUsuario,
     eliminarUsuario
 } = require('../controllers/usuarios');
 
 router.get('/', obtenerUsuarios);
-router.get('/:propiedad=:valor', obtenerUsuariosPorPropiedad);
+router.get('/:propiedad=:valor', obtenerUsuarioPorPropiedad);
 router.post('/', crearUsuario);
 router.put('/:id', modificarUsuario);
 router.delete('/:id', eliminarUsuario);
