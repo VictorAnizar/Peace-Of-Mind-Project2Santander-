@@ -15,7 +15,7 @@ function obtenerEnfermedades() {
   // Simulando dos Enfermedads y respondiendolos
   
 }
-function obtenerEnfermedadesPorPropiedad(req, res){
+function obtenerEnfermedadPorPropiedad(req, res){
   //se guardan en variables los valores mandados por url
   // let valor = req.params.valor;
   // let propiedad = req.params.propiedad;
@@ -48,7 +48,7 @@ function eliminarEnfermedad() {
 module.exports = {
   crearEnfermedad,
   obtenerEnfermedades,
-  obtenerEnfermedadesPorPropiedad,
+  obtenerEnfermedadPorPropiedad,
   modificarEnfermedad,
   eliminarEnfermedad
 }

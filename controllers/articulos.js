@@ -15,7 +15,7 @@ function obtenerArticulos() {
   // Simulando dos Articulos y respondiendolos
   
 }
-function obtenerArticulosPorPropiedad(req, res){
+function obtenerArticuloPorPropiedad(req, res){
   //se guardan en variables los valores mandados por url
   // let valor = req.params.valor;
   // let propiedad = req.params.propiedad;
@@ -48,7 +48,7 @@ function eliminarArticulo() {
 module.exports = {
   crearArticulo,
   obtenerArticulos,
-  obtenerArticulosPorPropiedad,
+  obtenerArticuloPorPropiedad,
   modificarArticulo,
   eliminarArticulo
 }

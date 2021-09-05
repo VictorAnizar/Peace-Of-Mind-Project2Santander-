@@ -4,13 +4,13 @@ const router = require('express').Router();
 const {
     crearComentario,
     obtenerComentarios,
-    obtenerComentariosPorPropiedad,
+    obtenerComentarioPorPropiedad,
     modificarComentario,
     eliminarComentario
 } = require('../controllers/comentarios');
 
 router.get('/', obtenerComentarios);
-router.get('/:propiedad=:valor', obtenerComentariosPorPropiedad);
+router.get('/:propiedad=:valor', obtenerComentarioPorPropiedad);
 router.post('/', crearComentario);
 router.put('/:id', modificarComentario);
 router.delete('/:id', eliminarComentario);
