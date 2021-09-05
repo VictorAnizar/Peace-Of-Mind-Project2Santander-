@@ -55,7 +55,7 @@
 
 
   
-![Diagrama casos de uso](./casosDeUso.png) 
+![Diagrama casos de uso](./casosDeUso.png "Casos de Uso") 
 
 <!-- Historias de Usuario -->
 
@@ -78,7 +78,14 @@
 
 <!-- Breve descripción técnica del proyecto -->
 ## <b>Tecnologías utilizadas</b>
-* MongoDB (Base de datos)
-* Insomnia o Postman (Para correrlo)
-* Github (Repo del proyecto y documentación)
-* Visual Studio Code y Codespaces (Editor de texto)
+* <img src="./mongoDBLogo.png" alt="MongoBD Logo" title="mongoDB" width="13%">(Base de datos)
+  
+* <img src="./insomniaLogo.png" alt="Insomnia Logo" title="Insomnia" width="13%"> (Para correrlo)
+
+* <img src="./postmanLogo.png" alt="Postman Logo" title="Postman" width="13%"> (Para correrlo)
+
+* <img src="./githubLogo.png" alt="Github Logo" title="Github" width="13%"> (Repo del proyecto y documentación)
+
+* <img src="./VScodeLogo.png" alt="VScode Logo" title="Github" width="13%"> (Editor de texto)
+
+* <img src="./gitLogo.png" alt="git Logo" title="git" width="17%"> (Trabajo con ramas, versiones, clonar, hacer push, etc.)
