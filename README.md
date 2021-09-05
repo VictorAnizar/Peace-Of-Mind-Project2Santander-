@@ -77,16 +77,16 @@
 <!-- Breve descripción técnica del proyecto -->
 ## <b>Tecnologías utilizadas</b>
 
-Para la realizaciónn de este proyecto se utilizaron distintas tecnologías para poder realizar distinas tareas, tales como:
+Para la realización de este proyecto se utilizaron distintas tecnologías para poder realizar distinas tareas, tales como:
 
-* <img src="./img/mongoDBLogo.png" alt="MongoBD Logo" title="mongoDB" width="13%">(Base de datos)
+* <img src="./img/mongoDBLogo.png" alt="MongoBD Logo" title="mongoDB" width="13%">Mongo DB (Base de datos)
   
-* <img src="./img/insomniaLogo.png" alt="Insomnia Logo" title="Insomnia" width="13%"> (Para correrlo)
+* <img src="./img/insomniaLogo.png" alt="Insomnia Logo" title="Insomnia" width="13%">Insomnia (Para correrlo)
 
-* <img src="./img/postmanLogo.png" alt="Postman Logo" title="Postman" width="13%"> (Para correrlo)
+* <img src="./img/postmanLogo.png" alt="Postman Logo" title="Postman" width="13%">Postman (Para correrlo)
 
-* <img src="./img/githubLogo.png" alt="Github Logo" title="Github" width="13%"> (Repo del proyecto y documentación)
+* <img src="./img/githubLogo.png" alt="Github Logo" title="Github" width="13%">GitHub (Repo del proyecto y documentación)
 
-* <img src="./img/VScodeLogo.png" alt="VScode Logo" title="Github" width="13%"> (Editor de texto)
+* <img src="./img/VScodeLogo.png" alt="VScode Logo" title="Github" width="13%">Visual Studio Code (Editor de texto)
 
-* <img src="./img/gitLogo.png" alt="git Logo" title="git" width="17%"> (Trabajo con ramas, versiones, clonar, hacer push, etc.)
+* <img src="./img/gitLogo.png" alt="git Logo" title="git" width="17%">Git (Trabajo con ramas, versiones, clonar, hacer push, etc.)
