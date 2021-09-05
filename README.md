@@ -55,7 +55,7 @@
 
 
   
-![Diagrama casos de uso](./casosDeUso.png "Casos de Uso") 
+![Diagrama casos de uso](./img/casosDeUso.png "Casos de Uso") 
 
 <!-- Historias de Usuario -->
 
@@ -78,14 +78,14 @@
 
 <!-- Breve descripción técnica del proyecto -->
 ## <b>Tecnologías utilizadas</b>
-* <img src="./mongoDBLogo.png" alt="MongoBD Logo" title="mongoDB" width="13%">(Base de datos)
+* <img src="./img/mongoDBLogo.png" alt="MongoBD Logo" title="mongoDB" width="13%">(Base de datos)
   
-* <img src="./insomniaLogo.png" alt="Insomnia Logo" title="Insomnia" width="13%"> (Para correrlo)
+* <img src="./img/insomniaLogo.png" alt="Insomnia Logo" title="Insomnia" width="13%"> (Para correrlo)
 
-* <img src="./postmanLogo.png" alt="Postman Logo" title="Postman" width="13%"> (Para correrlo)
+* <img src="./img/postmanLogo.png" alt="Postman Logo" title="Postman" width="13%"> (Para correrlo)
 
-* <img src="./githubLogo.png" alt="Github Logo" title="Github" width="13%"> (Repo del proyecto y documentación)
+* <img src="./img/githubLogo.png" alt="Github Logo" title="Github" width="13%"> (Repo del proyecto y documentación)
 
-* <img src="./VScodeLogo.png" alt="VScode Logo" title="Github" width="13%"> (Editor de texto)
+* <img src="./img/VScodeLogo.png" alt="VScode Logo" title="Github" width="13%"> (Editor de texto)
 
-* <img src="./gitLogo.png" alt="git Logo" title="git" width="17%"> (Trabajo con ramas, versiones, clonar, hacer push, etc.)
+* <img src="./img/gitLogo.png" alt="git Logo" title="git" width="17%"> (Trabajo con ramas, versiones, clonar, hacer push, etc.)
