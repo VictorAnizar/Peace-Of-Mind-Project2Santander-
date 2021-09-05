@@ -14,8 +14,6 @@
 
 * Mark Anthony López
 
-* Carlos Eduardo Gómez
-
 <!-- Descripción del proyecto -->
 
 ## <b>Descripción del proyecto</b>
