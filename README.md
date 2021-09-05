@@ -76,6 +76,9 @@
 
 <!-- Breve descripción técnica del proyecto -->
 ## <b>Tecnologías utilizadas</b>
+
+Para la realizaciónn de este proyecto se utilizaron distintas tecnologías para poder realizar distinas tareas, tales como:
+
 * <img src="./img/mongoDBLogo.png" alt="MongoBD Logo" title="mongoDB" width="13%">(Base de datos)
   
 * <img src="./img/insomniaLogo.png" alt="Insomnia Logo" title="Insomnia" width="13%"> (Para correrlo)
