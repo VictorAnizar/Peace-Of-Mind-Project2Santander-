@@ -4,13 +4,13 @@ const router = require('express').Router();
 const {
     crearEnfermedad,
     obtenerEnfermedades,
-    obtenerEnfermedadesPorPropiedad,
+    obtenerEnfermedadPorPropiedad,
     modificarEnfermedad,
     eliminarEnfermedad
 } = require('../controllers/enfermedades');
 
 router.get('/', obtenerEnfermedades);
-router.get('/:propiedad=:valor', obtenerEnfermedadesPorPropiedad);
+router.get('/:propiedad=:valor', obtenerEnfermedadPorPropiedad);
 router.post('/', crearEnfermedad);
 router.put('/:id', modificarEnfermedad);
 router.delete('/:id', eliminarEnfermedad);

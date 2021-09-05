@@ -14,7 +14,7 @@ function crearRecurso() {
 function obtenerRecursos() {
   // Simulando dos Recursos y respondiendolos
 }
-function obtenerRecursosPorPropiedad(req, res){
+function obtenerRecursoPorPropiedad(req, res){
   //se guardan en variables los valores mandados por url
   // let valor = req.params.valor;
   // let propiedad = req.params.propiedad;
@@ -47,7 +47,7 @@ function eliminarRecurso() {
 module.exports = {
   crearRecurso,
   obtenerRecursos,
-  obtenerRecursosPorPropiedad,
+  obtenerRecursoPorPropiedad,
   modificarRecurso,
   eliminarRecurso
 }

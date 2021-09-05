@@ -4,13 +4,13 @@ const router = require('express').Router();
 const {
     crearRecurso,
     obtenerRecursos,
-    obtenerRecursosPorPropiedad,
+    obtenerRecursoPorPropiedad,
     modificarRecurso,
     eliminarRecurso
 } = require('../controllers/recursos');
 
 router.get('/', obtenerRecursos);
-router.get('/:propiedad=:valor', obtenerRecursosPorPropiedad);
+router.get('/:propiedad=:valor', obtenerRecursoPorPropiedad);
 router.post('/', crearRecurso);
 router.put('/:id', modificarRecurso);
 router.delete('/:id', eliminarRecurso);

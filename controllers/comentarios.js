@@ -16,7 +16,7 @@ function obtenerComentarios() {
   
 }
 
-function obtenerComentariosPorPropiedad(req, res){
+function obtenerComentarioPorPropiedad(req, res){
   //se guardan en variables los valores mandados por url
   // let valor = req.params.valor;
   // let propiedad = req.params.propiedad;
@@ -49,7 +49,7 @@ function eliminarComentario() {
 module.exports = {
   crearComentario,
   obtenerComentarios,
-  obtenerComentariosPorPropiedad,
+  obtenerComentarioPorPropiedad,
   modificarComentario,
   eliminarComentario
 }
