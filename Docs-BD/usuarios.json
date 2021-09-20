@@ -1,0 +1,73 @@
+[
+    
+    {
+        "nombre": "Paloma Ríos Mariño",
+        "apellidos": ["Rocha","Gras"],
+        "usuario": "marioloma",
+        "contrasenia": "65Qfh3g$f&kFiAZi",
+        "tipoUsuario": "directo"
+    },
+    {
+        "nombre": "Luis",
+        "apellidos": ["Gomila","Vallejo"],
+        "usuario": "gomilus",
+        "contrasenia": "7FC5f3&oBJs$mH!4",
+        "tipoUsuario": "directo"
+    },
+    {
+        "nombre": "Gertrudis",
+        "apellidos": ["Cabrero","Barceló"],
+        "usuario": "gbarcel",
+        "contrasenia": "KjRot9wsm!L4HtMP",
+        "tipoUsuario": "directo"
+    },
+    {
+        "nombre": "Jeremías",
+        "apellidos": ["Rocha","Gras"],
+        "usuario": "jehagras",
+        "contrasenia": "wx%P7v8NJWW5G#Vu",
+        "tipoUsuario": "indirecto"
+    },
+    {
+        "nombre": "Cayetano",
+        "apellidos": ["Cortés","Cerdá"],
+        "usuario": "cortser",
+        "contrasenia": "LYyeu!t9d7c5&5Aq",
+        "tipoUsuario": "indirecto"
+    },
+    {
+        "nombre": "Zacarías",
+        "apellidos": ["Peralta","Pardo"],
+        "usuario": "zpardo",
+        "contrasenia": "vF%gqjNSM&H49S7^",
+        "tipoUsuario": "indirecto"
+    },
+    {
+        "nombre": "Juanita",
+        "apellidos": ["Vélez","Gomez"],
+        "usuario": "vlezita",
+        "contrasenia": "4$U3BQ8A9V#stSDh",
+        "tipoUsuario": "indirecto"
+    },
+    {
+        "nombre": "Rosa María",
+        "apellidos": ["Rodríguez","Fuster"],
+        "usuario": "rosafuster",
+        "contrasenia": "@RY$DK^5T#j37Qip",
+        "tipoUsuario": "indirecto"
+    },
+    {
+        "nombre": "Abraham",
+        "apellidos": ["Madrid","Pinilla"],
+        "usuario": "abmadrid",
+        "contrasenia": "U7Ya%&FE779oGvh^",
+        "tipoUsuario": "externo"
+    },
+    {
+        "nombre": "Manuel",
+        "apellidos": ["Peinado","Acevedo"],
+        "usuario": "pecevedo",
+        "contrasenia": "%%Sgzh&sF2aap3&B",
+        "tipoUsuario": "externo"
+    }
+]

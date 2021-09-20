@@ -1,0 +1,43 @@
+[
+    {
+        "nombre": "Trastorno de ansiedad",
+        "texto": "Trastorno mental que se caracteriza por producir sensaciones de preocupación, ansiedad o miedo, tan fuertes que interfieren con las actividades diarias de quien las padece. Algunos trastornos de ansiedad pueden ser los ataques de pánico, los trastornos obsesivos compulsivos y los trastornos de estrés postraumático. Los síntomas incluyen inquietud, imposibilidad de dejar a un lado una preocupación y estrés fuera de proporción con el impacto del acontecimiento. El tratamiento incluye psicoterapia o medicamentos, como los antidepresivos."
+    },
+    {
+        "nombre": "Trastorno bipolar",
+        "texto": "Trastorno que provoca altibajos emocionales, que van desde trastornos de depresión hasta episodios maníacos. Se desconoce la causa exacta del trastorno bipolar, pero es posible que tenga que ver con una combinación de factores genéticos y ambientales y de la alteración de las sustancias químicas y las estructuras del cerebro. Los episodios maníacos pueden incluir síntomas como exceso de energía, reducción de la necesidad de dormir y pérdida de noción de la realidad. Los episodios depresivos pueden incluir síntomas como falta de energía, poca motivación y pérdida de interés en las actividades cotidianas. Los episodios de cambios de humor duran de días a meses y también pueden estar asociados con pensamientos suicidas. El tratamiento suele ser de por vida e incluir una combinación de medicamentos y psicoterapia."
+    },
+    {
+        "nombre": "Demencia",
+        "texto": "Conjunto de pensamientos y síntomas sociales que interfieren con la vida cotidiana. La demencia no es una enfermedad específica, sino un grupo de trastornos caracterizados por el deterioro de, al menos, dos funciones cerebrales, como la memoria y la razón. Los síntomas incluyen olvidos, aptitudes sociales restringidas y razonamiento tan limitado que interfiere en las actividades diarias. Los medicamentos y la terapia pueden ayudar a controlar los síntomas. Algunas causas son reversibles."
+    },
+    {
+        "nombre": "Trastorno por déficit de atención con hiperactividad",
+        "texto": "Trastorno crónico caracterizado por la dificultad para prestar atención, la hiperactividad y la impulsividad. El ADHD suele comenzar en la niñez y puede persistir hasta la edad adulta. Puede ocasionar baja autoestima, problemas en las relaciones y dificultades en la escuela o el trabajo. Los síntomas incluyen hiperactividad y atención limitada. El tratamiento incluye medicamentos y terapia conversacional."
+    },
+    {
+        "nombre": "Esquizofrenia",
+        "texto": "Trastorno que afecta la capacidad de una persona para pensar, sentir y comportarse de manera lúcida. Se desconoce la causa exacta de la esquizofrenia, pero es posible que tenga que ver con una combinación de factores genéticos y ambientales y de la alteración de las sustancias químicas y las estructuras del cerebro. La esquizofrenia se caracteriza por pensamientos o experiencias que parecen estar desconectados de la realidad, habla o comportamiento desorganizados y disminución de la participación en las actividades cotidianas. También pueden presentarse dificultades en la concentración y la memoria. El tratamiento suele ser de por vida e incluir una combinación de medicamentos, psicoterapia y servicios de cuidado especialmente coordinados."
+    },
+    {
+        "nombre": "Trastorno obsesivo-compulsivo",
+        "texto": "Pensamientos excesivos (obsesiones) que llevan a comportamientos repetitivos (compulsiones). El trastorno obsesivo compulsivo se caracteriza por los pensamientos irracionales y los temores (obsesiones) que provocan comportamientos compulsivos. El TOC se caracteriza por la obsesión en asuntos como el miedo a los gérmenes o la necesidad de organizar ciertos objetos de una manera específica. Los síntomas pueden manifestarse gradualmente y variar a lo largo de los años. El tratamiento incluye terapia conversacional, medicamentos o una combinación de ambos."
+    },
+    {
+        "nombre": "Trastorno por estrés postraumático",
+        "texto": "Trastorno caracterizado por la imposibilidad de recuperarse después de experimentar o presenciar un evento atemorizante. El trastorno puede durar desde meses hasta años y suele haber episodios que recuerdan el trauma y causan intensas reacciones emocionales y físicas. Entre los síntomas se encuentran tener pesadillas o recuerdos repentinos, evitar situaciones que recuerden el trauma, reaccionar exageradamente ante los estímulos, y sufrir de ansiedad o depresión. El tratamiento incluye diferentes tipos de psicoterapia y medicamentos para controlar los síntomas."
+    },
+    {
+        "nombre": "Trastorno depresivo mayor",
+        "texto": "Trastorno de salud mental que se caracteriza por depresión persistente o pérdida de interés en las actividades, lo que puede causar dificultades significativas en la vida cotidiana. Las causas posibles incluyen una combinación de fuentes biológicas, psicológicas y sociales de angustia. Cada vez son más las investigaciones que sugieren que estos factores pueden ocasionar cambios en la función cerebral, como la actividad anormal de ciertos circuitos neuronales en el cerebro. El sentimiento de tristeza permanente o la pérdida de interés que caracterizan a la depresión grave pueden provocar una variedad de trastornos emocionales y físicos. Pueden incluir trastornos en hábitos del sueño, apetito, nivel de energía, concentración, comportamiento diario o autoestima. La depresión también puede asociarse con pensamientos suicidas. El tratamiento principal son los medicamentos, la terapia conversacional o una combinación de ambos. Cada vez son más las investigaciones que sugieren que estos tratamientos pueden normalizar los cambios cerebrales asociados con la depresión."
+    },
+    {
+        "nombre": "Trastorno del espectro autista",
+        "texto": "El trastorno del espectro autista es una afección relacionada con el desarrollo del cerebro que afecta la manera en la que una persona percibe y socializa con otras personas, lo que causa problemas en la interacción social y la comunicación. El trastorno también comprende patrones de conducta restringidos y repetitivos. El término «espectro» en el trastorno del espectro autista se refiere a un amplio abanico de síntomas y gravedad. El trastorno del espectro autista comprende afecciones que anteriormente se consideraban independientes, como el autismo, el síndrome de Asperger, el trastorno desintegrativo infantil y una forma no especificada de trastorno generalizado del desarrollo. Algunas personas aún utilizan el término «síndrome de Asperger» que generalmente se considera que está en el período final leve del trastorno del espectro autista."
+    },
+    {
+        "nombre": "Trastornos de personalidad",
+        "texto": "Un trastorno de personalidad es un tipo de trastorno mental en el cual tienes un patrón de pensamiento, desempeño y comportamiento marcado y poco saludable. Una persona con trastorno de personalidad tiene problemas para percibir y relacionarse con las situaciones y las personas. Esto causa problemas y limitaciones importantes en las relaciones, las actividades sociales, el trabajo y la escuela. En algunos casos, es posible que no te des cuenta de que tienes un trastorno de personalidad porque tu manera de pensar y comportarte te parece natural. Y es posible que culpes a los demás por los problemas que tienes. Los trastornos de personalidad generalmente comienzan en la adolescencia o la adultez temprana. Existen muchos tipos de trastorno de personalidad. Algunos tipos se vuelven menos obvios en el transcurso de la mediana edad."
+    }
+]
+

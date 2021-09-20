@@ -1,0 +1,114 @@
+[
+    {
+        "tipo": "Podcast",
+        "nombre": "La depresión #01 - Podcast 45",
+        "link": "https://open.spotify.com/episode/5VOIjDaJ8DLNY2n6pkvKic",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "tipo": "Podcast",
+        "nombre": "Acompañar a una persona con ansiedad | 156",
+        "link": "https://open.spotify.com/episode/0gq274CMGhevBCrzkmnJWI",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
+    },
+    {
+        "tipo": "Podcast",
+        "nombre": "Ataques de pánico - Podcast 111",
+        "link": "https://open.spotify.com/episode/09jfB003nADjO2kmu0A20R",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
+    },
+    {
+        "tipo": "Podcast",
+        "nombre": "Terapia de recuerdo para la demencia",
+        "link": "https://www.cochrane.org/es/podcasts/10.1002/14651858.CD001120.pub3",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1ded"
+        }
+    },
+    {
+        "tipo": "Podcast",
+        "nombre": "Autismo: otra forma de ser en el mundo, Melisa Tuya y Diana Bohórquez",
+        "link": "https://www.bbva.com/es/podcast-autismo-otra-forma-de-ser-en-el-mundo-melisa-tuya-y-diana-bohorquez/",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df3"
+        }
+    },
+    {
+        "tipo": "Podcast",
+        "nombre": "LOS TRASTORNOS DE PERSONALIDAD",
+        "link": "https://www.psicok.es/podcasts/2018/5/5/trastornos-de-personalidad",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df4"
+        }
+    },
+    {
+        "tipo": "Podcast",
+        "nombre": "El trastorno obsesivo-compulsivo (TOC) - Podcast 74",
+        "link": "https://open.spotify.com/episode/4wLMjaPXW57O1HT3orMGuc",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df0"
+        }
+    },
+    {
+        "tipo": "Aplicaciones Moviles",
+        "nombre": "Meyo: Bienestar Emocional",
+        "link": "https://play.google.com/store/apps/details?id=com.aboueats.meyo&hl=es_419&gl=US",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
+    },
+    {
+        "tipo": "Aplicaciones Moviles",
+        "nombre": "Lojong: Meditación Mindfulness",
+        "link": "https://play.google.com/store/apps/details?id=br.com.lojong",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
+    },
+    {
+        "tipo": "Aplicaciones Moviles",
+        "nombre": "Worry Watch",
+        "link": "https://apps.apple.com/es/app/worry-watch-para-la-ansiedad/id693833917",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
+    },
+    {
+        "tipo": "Aplicaciones Web",
+        "nombre": "Mentavio",
+        "link": "https://www.mentavio.es/",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "tipo": "Aplicaciones Web",
+        "nombre": "TherapyChat",
+        "link": "https://therapychat.com/",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "tipo": "Aplicaciones Web",
+        "nombre": "Gurumind",
+        "link": "https://gurumind.es/",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "tipo": "Podcast",
+        "nombre": "¿Qué sentirías si te dijera que vas a pasar el día con una persona diagnosticada con un trastorno mental grave?",
+        "link": "https://www.podiumpodcast.com/mi-cabeza-me-hace-trampas/temporada-1/que-sentirias-si-te-dijera-que-vas-a-pasar-el-dia-con-una-persona-diagnosticada-con-un-trastorno-mental-grave/",
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1def"
+        }
+    }
+]
