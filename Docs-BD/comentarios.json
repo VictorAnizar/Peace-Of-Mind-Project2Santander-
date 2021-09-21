@@ -1,28 +1,152 @@
-
 [
     {
-        "texto": "",
-        "reacciones": "",
-        "idComentarioPrincipal": "",
-        "anonimo": "",
-        "idUsuario": "",
-        "idEnfermedad": ""
+        "texto": "Muchas gracias por el contenido que recomiendan, el podcast que recomiendan es exelente.",
+        "reacciones": 0,
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1ded"
+        }
     },
     {
-        "texto": "",
-        "reacciones": "",
-        "idComentarioPrincipal": "",
-        "anonimo": "",
-        "idUsuario": "",
-        "idEnfermedad": ""
+        "texto": "Las apps recomendadas realmente me ayudaron a reducir mi ansiedad",
+        "reacciones": 0,
+        "anonimo": false,
+        "idUsuario": {
+            "$oid": "6148e64816ee22a19e6d1de0"
+        },
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
     },
     {
-        "texto": "",
-        "reacciones": "",
-        "idComentarioPrincipal": "",
-        "anonimo": "",
-        "idUsuario": "",
-        "idEnfermedad": ""
+        "texto": "La depresión es un problema serio, pero no significa que sea un tabú, gracias a los podcast recomendados pude acercarme a mi hermano para platicar sobre su enfermedad.",
+        "reacciones": 5,
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "texto": "Animo amigo, la depresión es una enfermedad que se puede controlar y sanar, espero que tu hermano se mejore.",
+        "reacciones": 1,
+        "idComentarioPrincipal": {
+            "$oid": "61496cea16ee22a19e6d1e62"
+        },
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "texto": "Esperemos en Dios que todo mejore amigo, todo va a salir bien",
+        "reacciones": 0,
+        "idComentarioPrincipal": {
+            "$oid": "6148e64816ee22a19e6d1de0"
+        },
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "texto": "Gran diversidad de recursos, me encantaron, muchas gracias.",
+        "reacciones": 0,
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
+    },
+    {
+        "texto": "Excelentes artículos, me ayudaron a comprender un poco más sobre la enfermedad de mi novia.",
+        "reacciones": 0,
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "614902d116ee22a19e6d1e01"
+        }
+    },
+    {
+        "texto": "En el lugar donde trabajo hay un niño con autistmo y estaba buscando información para saber como convivir con él sin invadir su espacio, muchas gracias.",
+        "reacciones": 3,
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df3"
+        }
+    },
+    {
+        "texto": "Esperemos que puedas lograr acercarte a él, amiga, éxito.",
+        "reacciones": 2,
+        "idComentarioPrincipal": {
+            "$oid": "61496cea16ee22a19e6d1e66"
+        },
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df3"
+        }
+    },
+    {
+        "texto": "Tu puedes amiga, todo saldra bien.",
+        "reacciones": 1,
+        "idComentarioPrincipal": {
+            "$oid": "61496cea16ee22a19e6d1e66"
+        },
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df3"
+        }
+    },
+    {
+        "texto": "Animo amiga, tu puedes!!!!",
+        "reacciones": 1,
+        "idComentarioPrincipal": {
+            "$oid": "61496cea16ee22a19e6d1e66"
+        },
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df3"
+        }
+    },
+    {
+        "texto": "Debido a diversos problemas y por la pandemia no podíamos llevar a mi hijo al psicólogo, gracias a su página pudimos encontrar asistencia de manera virtual.",
+        "reacciones": 0,
+        "anonimo": false,
+        "idUsuario": {
+            "$oid": "6148e64816ee22a19e6d1de2"
+        },
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1df2"
+        }
+    },
+    {
+        "texto": "Entender los transtornos de personalidad que sufre mi madre me llevo a ser más comprensivo con ella y entender que a veces no es ella la que me trata de una forma extraña.",
+        "reacciones": 0,
+        "anonimo": false,
+        "idUsuario": {
+            "$oid": "6148e64816ee22a19e6d1de4"
+        },
+        "idEnfermedad": {
+            "$oid": "6149149616ee22a19e6d1e12"
+        }
+    },
+    {
+        "texto": "Excelentes recursos amigos, esperemos y puedan seguir añadiendo más recursos a su página",
+        "reacciones": 5,
+        "anonimo": true,
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
+    },
+    {
+        "texto": "Siii y si es posible que tengamos un chat para contar con una cercania mucho mayor con otros usuarios y así poder apoyarnos.",
+        "reacciones": 2,
+        "idComentarioPrincipal": {
+            "$oid": "61496cea16ee22a19e6d1e69"
+        },
+        "anonimo": false,
+        "idUsuario": {
+            "$oid": "6148e64816ee22a19e6d1de5"
+        },
+        "idEnfermedad": {
+            "$oid": "6148eae216ee22a19e6d1deb"
+        }
     }
 ]
-
