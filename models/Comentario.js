@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 
 const ComentarioScheme = new mongoose.Schema({
     texto: { type: String, required: true },
-    reacciones: { type: String, required: false},
-    idComentarioPrincipal: {type: mongoose.Schema.Types.ObjectId, ref: "Comentario"},
+    reacciones: { type: String, required: false },
+    idComentarioPrincipal: { type: mongoose.Schema.Types.ObjectId, ref: "Comentario" },
     anonimo: { type: Boolean, required: true },
-    idUsuario: {type: mongoose.Schema.Types.ObjectId, ref: "Usuario"},
-    idEnfermedad: {type: mongoose.Schema.Types.ObjectId, ref: "Enfermedad"}
-}, {collation: "comentarios", timestamps: true});
+    idUsuario: { type: mongoose.Schema.Types.ObjectId, ref: "Usuario", required: false },
+    idEnfermedad: { type: mongoose.Schema.Types.ObjectId, ref: "Enfermedad" }
+}, { collation: "comentarios", timestamps: true });
 
-ComentarioScheme.methods.publicData=()=>{
+ComentarioScheme.methods.publicData = () => {
     return {
         id: this.id,
-        texto:    this.texto,
+        texto: this.texto,
         reacciones: this.reacciones,
         idComentarioPrincipal: this.idComentarioPrincipal,
         anonimo: this.anonimo,
