@@ -4,15 +4,33 @@
  */
 
 // importamos el modelo de Recursos
-const Recurso = require('../models/Recurso')
+const mongoose = require('mongoose');
+const Recurso = mongoose.model("Recurso");
 
 function crearRecurso() {
   // Instanciaremos un nuevo Recurso utilizando la clase Recurso
   
 }
 
-function obtenerRecursos() {
-  // Simulando dos Recursos y respondiendolos
+function obtenerRecursos(req, res, next) {
+  // Si se recibe una id
+  if(req.params.id){
+    Recurso.findById(req.params.id)
+    .then(rec=>{
+      res.status(200).send(rec);
+    })
+    .catch(next);
+  }
+  else{ 
+    Recurso.find()
+    .then(
+      recs=>{
+        res.send(recs);
+      }
+    )
+    .catch(next);
+  }
+
 }
 function obtenerRecursoPorPropiedad(req, res){
   //se guardan en variables los valores mandados por url

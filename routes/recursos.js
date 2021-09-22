@@ -11,6 +11,7 @@ const {
 
 router.get('/', obtenerRecursos);
 router.get('/:propiedad=:valor', obtenerRecursoPorPropiedad);
+router.get('/:id', obtenerRecursos);
 router.post('/', crearRecurso);
 router.put('/:id', modificarRecurso);
 router.delete('/:id', eliminarRecurso);

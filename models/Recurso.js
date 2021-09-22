@@ -5,7 +5,7 @@ const RecursoScheme = new mongoose.Schema({
     nombre: {type: String, required: true},
     link: {type: String, required: true},
     idEnfermedad: { type: mongoose.Schema.Types.ObjectId, ref: "Enfermedad" }
-})
+}, {collection: "recursos", timestamps: true})
 
 RecursoScheme.methods.publicData = ()=>{
     return {
@@ -17,4 +17,4 @@ RecursoScheme.methods.publicData = ()=>{
     }
 }
 
-mongoose.model("recursos", RecursoScheme);
+mongoose.model("Recurso", RecursoScheme);
