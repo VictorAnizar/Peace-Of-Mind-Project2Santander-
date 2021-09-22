@@ -7,9 +7,12 @@
 const mongoose = require('mongoose');
 const Recurso = mongoose.model("Recurso");
 
-function crearRecurso() {
-  // Instanciaremos un nuevo Recurso utilizando la clase Recurso
-  
+function crearRecurso(req, res, next) {
+  // Instanciaremos un nuevo Recurso
+  let recurso = new Recurso(req.body);
+  recurso.save()
+  .then(rec=>res.status(200).send("Registro creado"))
+  .catch(next);
 }
 
 function obtenerRecursos(req, res, next) {
@@ -57,8 +60,10 @@ function modificarRecurso() {
  
 }
 
-function eliminarRecurso() {
-  
+function eliminarRecurso(req, res, next) {
+    Recurso.findByIdAndDelete({_id: req.params.id})
+    .then(rec=>res.send("Registro eliminado"))
+    .catch(next);
 }
 
 // exportamos las funciones definidas
