@@ -64,8 +64,34 @@ function obtenerEnfermedadPorPropiedad(req, res){
   res.status(418).send("I'm a such sic teapot");
 }
 
-function modificarEnfermedad() {
- 
+function modificarEnfermedad(req, res, next) {
+    Enfermedad.findById(req.params.id)
+    .then(
+      enf=>{
+        //si no esta definida
+        if (!enf) {
+          res.status(401).send("Registro no encontrado para eliminar");
+        }
+        //Si sí existe, obtenemos lo que nos manda el usuario
+      let nuevaInfo = req.body;
+      //Si se desea cambiar el nombre
+      if (typeof nuevaInfo.nombre !== "undefined") {
+        enf.nombre = nuevaInfo.nombre
+      }
+      //Si se desea cambiar el texto
+      if (typeof nuevaInfo.texto !== "undefined") {
+        enf.texto = nuevaInfo.texto
+      }
+      
+      //se guarda el registro actualizado
+      enf.save()
+        .then(
+          //se manda a la BD en forma de JSON
+          updated => res.status(200).json(updated.publicData())
+        )
+        .catch(next);
+      })
+      .catch(next);
 }
 
 function eliminarEnfermedad(req, res, next) {
