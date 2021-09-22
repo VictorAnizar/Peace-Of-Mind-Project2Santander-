@@ -4,23 +4,41 @@ const mongoose = require('mongoose');
 const Enfermedad = mongoose.model("Enfermedad");
 
 
-function crearEnfermedad() {
-  // Instanciaremos un nuevo Enfermedad utilizando la clase Enfermedad
-  
+function crearEnfermedad(req, res, next) {
+  //El cliente nos manda esa mascota en el body
+  let enfermedad = new Enfermedad(req.body);  
+  //Se debe de tratar con errores porque pueden surgir en cualquier momento
+  enfermedad.save()
+    //En caso de que TODO haya salido bien
+    .then(enf => {
+      //Se manda un estatus y se manda a la info
+      res.status(200).send(enf);
+    })
+    //En caso de algun error
+    //Dejamos que mongoose responda
+    //Se usa el parametro next para modelar el paso siguiente
+    .catch(next);
 }
 
 function obtenerEnfermedades(req, res, next) {
-  // Simulando dos Enfermedads y respondiendolos
+//Se tiene que definir dos comportamientos: Obtencion de todos los registros y obtencion de uno solo
+  //vemos si en los parametros del usuario, hay un campo ID. En caso afirmativo, esta buscando un registro en especifico
   if(req.params.id){
     Enfermedad.findById(req.params.id)
+    //Si sale bien, se manda el registro
     .then(
       enf => {res.send(enf)}
     )
+    //Si sale mal se deja que mongoose responda
     .catch(next)
   }
+  //Si la peticion no incluye un ID, el cliente busca todos los registros
   else{
+    //Trae toda la info de la coleccion a la que se esta haciendo referencia
     Enfermedad.find()
+    //Si sale bien, se regresan los datos
     .then(enfs => res.send(enfs))
+    //Si sale mal, mongoose responde
     .catch(next);
   }
   
@@ -43,7 +61,7 @@ function obtenerEnfermedadPorPropiedad(req, res){
   //     }
   // }
   // res.status(404).send(" Usuario no encontrado. Introduce un valor existente para la propiedad "+propiedad);
-
+  res.send(418);
 }
 
 function modificarEnfermedad() {
