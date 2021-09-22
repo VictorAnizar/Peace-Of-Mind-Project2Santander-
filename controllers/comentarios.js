@@ -6,8 +6,12 @@
 // importamos el modelo de Comentarios
 const mongoose = require ('mongoose');
 const Comentario = mongoose.model("Comentario");
-function crearComentario() {
+function crearComentario(req, res, next) {
   // Instanciaremos un nuevo Comentario utilizando la clase Comentario
+  let comentario = new Comentario(req.body);
+  comentario.save()
+  .then(com=>res.send("Registro creado"))
+  .catch(next);
   
 }
 
