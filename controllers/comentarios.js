@@ -4,16 +4,25 @@
  */
 
 // importamos el modelo de Comentarios
-const Comentario = require('../models/Comentario')
-
+const mongoose = require ('mongoose');
+const Comentario = mongoose.model("Comentario");
 function crearComentario() {
   // Instanciaremos un nuevo Comentario utilizando la clase Comentario
   
 }
 
-function obtenerComentarios() {
+function obtenerComentarios(req, res, next) {
   // Simulando dos Comentarios y respondiendolos
-  
+  if (req.params.id) {
+    Comentario.findById(req.params.id)
+    .then(com=>res.send(com))
+    .catch(next);
+  }
+  else{
+    Comentario.find()
+    .then(coms=>res.send(coms))
+    .catch(next);
+  }
 }
 
 function obtenerComentarioPorPropiedad(req, res){

@@ -11,6 +11,7 @@ const {
 
 router.get('/', obtenerComentarios);
 router.get('/:propiedad=:valor', obtenerComentarioPorPropiedad);
+router.get('/:id', obtenerComentarios);
 router.post('/', crearComentario);
 router.put('/:id', modificarComentario);
 router.delete('/:id', eliminarComentario);
