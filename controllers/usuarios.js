@@ -4,6 +4,14 @@ const mongoose = require("mongoose")
 const Usuario = mongoose.model("Usuario")
 
 function crearUsuario(req, res, next) {
+  let usuario = new Usuario(req.body);
+  usuario.save()
+  .then(
+    usr =>{
+      res.status(200).send(usr);
+    }
+  )
+  .catch(next);
   
 }
 
