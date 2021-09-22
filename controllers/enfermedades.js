@@ -61,7 +61,7 @@ function obtenerEnfermedadPorPropiedad(req, res){
   //     }
   // }
   // res.status(404).send(" Usuario no encontrado. Introduce un valor existente para la propiedad "+propiedad);
-  res.send(418);
+  res.status(418).send("I'm a such sic teapot");
 }
 
 function modificarEnfermedad() {
