@@ -68,8 +68,10 @@ function modificarEnfermedad() {
  
 }
 
-function eliminarEnfermedad() {
-  
+function eliminarEnfermedad(req, res, next) {
+  Enfermedad.findByIdAndDelete({_id: req.params.id})
+  .then(r=>res.status(200).send("Registro eliminado"))
+  .catch(next);
 }
 
 // exportamos las funciones definidas
