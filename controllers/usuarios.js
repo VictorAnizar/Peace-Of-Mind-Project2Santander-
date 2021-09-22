@@ -62,8 +62,12 @@ function modificarUsuario() {
  
 }
 
-function eliminarUsuario() {
-  
+function eliminarUsuario(req, res, next) {
+  Usuario.findByIdAndDelete({_id:req.params.id})
+  .then(
+    usr => res.status(200).send("Registro eliminado")
+  )
+  .catch(next);
 }
 
 // exportamos las funciones definidas
