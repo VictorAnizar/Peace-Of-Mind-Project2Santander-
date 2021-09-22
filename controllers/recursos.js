@@ -56,8 +56,38 @@ function obtenerRecursoPorPropiedad(req, res){
 
 }
 
-function modificarRecurso() {
- 
+function modificarRecurso(req, res, next) {
+  Recurso.findById(req.params.id)
+  .then(rec => {
+    //Si es Undefined
+    if (!rec) {
+      return res.sendStatus(401);
+    }
+    //Si sí existe, obtenemos lo que nos manda el usuario
+    let nuevaInfo = req.body;
+    //Si se desea cambiar el tipo
+    if (typeof nuevaInfo.tipo !== "undefined") {
+      rec.tipo = nuevaInfo.tipo
+    }
+    //Si se desea cambiar el nombre
+    if (typeof nuevaInfo.nombre !== "undefined") {
+      rec.nombre = nuevaInfo.nombre
+    }
+    //Si se desea cambiar el link
+    if (typeof nuevaInfo.link !== "undefined") {
+      rec.link = nuevaInfo.link
+    }
+   
+    //se guarda el registro actualizado
+    rec.save()
+      .then(
+        //se manda a la BD en forma de JSON
+        updated => res.status(200).send("Registro modificado")
+      )
+      .catch(next);
+
+  })
+  .catch(next);
 }
 
 function eliminarRecurso(req, res, next) {

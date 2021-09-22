@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const RecursoScheme = new mongoose.Schema({
-    tipo: {type: String, required: true},
+    tipo: {type: String, enum: ['Podcast', 'Aplicaciones Moviles', 'Aplicaciones Web'] , required: true},
     nombre: {type: String, required: true},
     link: {type: String, required: true},
     idEnfermedad: { type: mongoose.Schema.Types.ObjectId, ref: "Enfermedad" }
