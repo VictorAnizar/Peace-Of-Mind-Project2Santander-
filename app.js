@@ -10,13 +10,17 @@ app.use(bodyParser.json());
 //Configuración de la Base de datos
 //primero decimos que usaremos mongoose
 const mongoose=require('mongoose');
-mongoose.connect();
-//para que se generen alertas y errores de una forma verbosa
+// //Aqui va a estar la parte de autentificacion a la BD
+mongoose.connect("mongodb+srv://VictorAnizar:xomtjeXdXWJZXjYV@cluster0.eo0bj.mongodb.net/peace_of_mind?retryWrites=true&w=majority");
+// //para que se generen alertas y errores de una forma verbosa
+
 mongoose.set("debug", true);
-//usamos los modelos
+// //usamos los modelos
 require('./models/Usuario');
-require('./models/Mascota');
-require('./models/Solicitud');
+require('./models/Recurso');
+require('./models/Enfermedad');
+require('./models/Comentario');
+require('./models/Articulo');
 //configuracion de las rutas
 app.use('/v1', require('./routes'));
 //decimos cómo/dónde se va a ejecutar la app
