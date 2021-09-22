@@ -6,11 +6,7 @@
 // importamos el modelo de Usuarios
 const Usuario = require('../models/Usuario')
 
-let usuarios = {
-  Pedro1: new Usuario(1, 'Pedro1', 'Perez1', true, '123', 'Doctor'), 
-  Pedro2: new Usuario(12, 'Pedro2', 'Perez2', true, '123', 'Paciente'), 
-  Pedro3: new Usuario(13, 'Pedro3', 'Perez3', true, '123', 'Admin')
-};
+
 
 function crearUsuario() {
   // Instanciaremos un nuevo Usuario utilizando la clase Usuario
