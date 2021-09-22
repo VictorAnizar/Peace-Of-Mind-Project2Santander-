@@ -1,21 +1,31 @@
-/*  Archivo controllers/Usuarios.js
- *  Simulando la respuesta de objetos Usuario
- *  en un futuro aquí se utilizarán los modelos
- */
+// importamos el modelo de usuarios
+// controllers/usuarios.js
+const mongoose = require("mongoose")
+const Usuario = mongoose.model("Usuario")
 
-// importamos el modelo de Usuarios
-const Usuario = require('../models/Usuario')
-
-
-
-function crearUsuario() {
-  // Instanciaremos un nuevo Usuario utilizando la clase Usuario
+function crearUsuario(req, res, next) {
   
 }
 
-function obtenerUsuarios(req,res) {
-  // Simulando dos Usuarios y respondiendolos
-    res.send(usuarios);
+function obtenerUsuarios(req,res, next) {
+
+  if (req.params.id) { 
+    Usuario.findById(req.params.id)
+      //Si sale bien, se manda el registro
+      .then(
+        usr => {res.send(usr)}
+      )
+      //Si sale mal se deja que mongoose responda
+      .catch(next);
+  }
+  else{
+    Usuario.find()
+      //Si sale bien, se regresan los datos
+      .then(usrs => res.send(usrs))
+      //Si sale mal, mongoose responde
+      .catch((next));
+  }
+  
 }
 
 //Este metodo Buscar Un usuario por una propiedad en especifico. Devuelve la primer instancia de la búsqueda
