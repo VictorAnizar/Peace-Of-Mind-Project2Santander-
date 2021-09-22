@@ -58,8 +58,38 @@ function obtenerUsuarioPorPropiedad(req, res){
 
 }
 
-function modificarUsuario() {
- 
+function modificarUsuario(req, res, next) {
+  Usuario.findById(req.params.id)
+  .then(usr=>{
+    if (!usr) {
+      return  res.status(401).send("Registro no encontrado para modificar")
+    }
+    let nuevaInfo = req.body;
+    //Si se desea cambiar el nombre
+    if (typeof nuevaInfo.nombre !== "undefined") {
+      usr.nombre = nuevaInfo.nombre
+    }
+    //Si se desea cambiar el apellido
+    if (typeof nuevaInfo.apellidos !== "undefined") {
+      usr.apellidos = nuevaInfo.apellidos
+    }
+    //Si se desea cambiar el nickname
+    if (typeof nuevaInfo.usuario !== "undefined") {
+      usr.usuario = nuevaInfo.usuario
+    }
+    //Si se desea cambiar el tipo de usuario
+    if (typeof nuevaInfo.tipoUsuario !== "undefined") {
+      usr.tipoUsuario = nuevaInfo.tipoUsuario
+    }
+    
+    usr.save()
+      .then(
+        //se manda a la BD en forma de JSON
+        updated => res.status(200).send("usuario modificado")
+      )
+      .catch(next);
+  })
+  .catch(next);
 }
 
 function eliminarUsuario(req, res, next) {
