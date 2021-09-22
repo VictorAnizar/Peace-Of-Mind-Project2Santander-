@@ -1,18 +1,28 @@
-/*  Archivo controllers/Enfermedads.js
- *  Simulando la respuesta de objetos Enfermedad
- *  en un futuro aquí se utilizarán los modelos
- */
+//importamos mongoose
+const mongoose = require('mongoose');
+//importamos el modelo definido en mongoose
+const Enfermedad = mongoose.model("Enfermedad");
 
-// importamos el modelo de Enfermedads
-const Enfermedad = require('../models/Enfermedad')
 
 function crearEnfermedad() {
   // Instanciaremos un nuevo Enfermedad utilizando la clase Enfermedad
   
 }
 
-function obtenerEnfermedades() {
+function obtenerEnfermedades(req, res, next) {
   // Simulando dos Enfermedads y respondiendolos
+  if(req.params.id){
+    Enfermedad.findById(req.params.id)
+    .then(
+      enf => {res.send(enf)}
+    )
+    .catch(next)
+  }
+  else{
+    Enfermedad.find()
+    .then(enfs => res.send(enfs))
+    .catch(next);
+  }
   
 }
 function obtenerEnfermedadPorPropiedad(req, res){

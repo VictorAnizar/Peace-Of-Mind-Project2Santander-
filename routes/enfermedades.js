@@ -11,6 +11,7 @@ const {
 
 router.get('/', obtenerEnfermedades);
 router.get('/:propiedad=:valor', obtenerEnfermedadPorPropiedad);
+router.get('/:id', obtenerEnfermedades);
 router.post('/', crearEnfermedad);
 router.put('/:id', modificarEnfermedad);
 router.delete('/:id', eliminarEnfermedad);
