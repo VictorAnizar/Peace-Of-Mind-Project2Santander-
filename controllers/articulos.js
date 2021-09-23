@@ -1,19 +1,30 @@
-/*  Archivo controllers/Articulos.js
- *  Simulando la respuesta de objetos Articulo
- *  en un futuro aquí se utilizarán los modelos
- */
-
-// importamos el modelo de Articulos
-const Articulo = require('../models/Articulo')
-
+const mongoose = require('mongoose');
+const Articulo = mongoose.model("Articulo")
 function crearArticulo() {
   // Instanciaremos un nuevo Articulo utilizando la clase Articulo
   
 }
 
-function obtenerArticulos() {
+function obtenerArticulos(req, res, next) {
   // Simulando dos Articulos y respondiendolos
-  
+  if(req.params.id){
+    Articulo.findById(req.params.id)
+    .then(
+      art=>{
+        res.send(art);
+      }
+    )
+    .catch(next)
+  }
+  else{
+    Articulo.find()
+    .then(
+      arts=>{
+        res.status(200).send(arts);
+      }
+    )
+    .catch(next)
+  }
 }
 function obtenerArticuloPorPropiedad(req, res){
   //se guardan en variables los valores mandados por url

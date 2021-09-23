@@ -11,6 +11,7 @@ const {
 
 router.get('/', obtenerArticulos);
 router.get('/:propiedad=:valor', obtenerArticuloPorPropiedad);
+router.get('/:id', obtenerArticulos);
 router.post('/', crearArticulo);
 router.put('/:id', modificarArticulo);
 router.delete('/:id', eliminarArticulo);
