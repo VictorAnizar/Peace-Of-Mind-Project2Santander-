@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 //primero decimos que usaremos mongoose
 const mongoose=require('mongoose');
 // //Aqui va a estar la parte de autentificacion a la BD
-mongoose.connect("mongodb+srv://VictorAnizar:xomtjeXdXWJZXjYV@cluster0.eo0bj.mongodb.net/peace_of_mind?retryWrites=true&w=majority");
+mongoose.connect(process.env.MONGO_URI);
 // //para que se generen alertas y errores de una forma verbosa
 
 mongoose.set("debug", true);
@@ -25,8 +25,7 @@ require('./models/Articulo');
 app.use('/v1', require('./routes'));
 //decimos cómo/dónde se va a ejecutar la app
 //definimos el puerto 
-const PORT = 3464;
 //activa la aplicacion y decimos qué debe de hacer
-app.listen(PORT, () => {
-    console.log(`Server listening on port ${PORT}!`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on port ${process.env.PORT}!`);
 });
