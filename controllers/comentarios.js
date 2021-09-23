@@ -50,12 +50,34 @@ function obtenerComentarioPorPropiedad(req, res){
 
 }
 
-function modificarComentario() {
- 
+function modificarComentario(req, res, next) {
+  Comentario.findById(req.params.id)
+  .then(
+    com=>{
+      if (!com) {
+        return res.send("Registro no encontrado para modificar");
+      }
+      let nuevaInfo = req.body;
+      //Si se desea cambiar el texto (Es li unico que se puede modificar)
+      if (typeof nuevaInfo.texto !== "undefined") {
+        com.texto = nuevaInfo.texto
+      }
+      
+      com.save()
+        .then(
+          //se manda a la BD en forma de JSON
+          updated => res.status(200).send("Registro modificado")
+        )
+        .catch(next); 
+    }
+  )
+  .catch(next)
 }
 
-function eliminarComentario() {
-  
+function eliminarComentario(req, res, next) {
+    Comentario.findByIdAndDelete({_id:req.params.id})
+    .then(com=>{res.send("Registro eliminado")})
+    .catch(next);
 }
 
 // exportamos las funciones definidas
