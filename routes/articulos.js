@@ -4,13 +4,15 @@ const router = require('express').Router();
 const {
     crearArticulo,
     obtenerArticulos,
-    obtenerArticuloPorPropiedad,
     modificarArticulo,
-    eliminarArticulo
+    eliminarArticulo,
+    obtenerArticulosConAutor,
+    obtenerArticulosConEnfermedad
 } = require('../controllers/articulos');
 
+router.get('/getAutor/', obtenerArticulosConAutor);
+router.get('/getEnfermedadRelacionada/', obtenerArticulosConEnfermedad);
 router.get('/', obtenerArticulos);
-router.get('/:propiedad=:valor', obtenerArticuloPorPropiedad);
 router.get('/:id', obtenerArticulos);
 router.post('/', crearArticulo);
 router.put('/:id', modificarArticulo);

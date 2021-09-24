@@ -31,26 +31,7 @@ function obtenerArticulos(req, res, next) {
     .catch(next)
   }
 }
-function obtenerArticuloPorPropiedad(req, res){
-  //se guardan en variables los valores mandados por url
-  // let valor = req.params.valor;
-  // let propiedad = req.params.propiedad;
-  // for (const key of Object.entries(usuarios)) {
-  //     //si por lo menos sabemos que el valor mandado para la propiedad existe
-  //     if (key[1][propiedad] ) {
-  //         if (key[1][propiedad] == valor) {
-  //         //se hace un filtro y se devuelve el json de la constelacion el cual contenga como propiedad
-  //         //el valor mandado
-  //         res.send(...key.filter(e => e[propiedad] == valor));
-  //         }
-  //     }
-  //     else{
-  //         res.status(404).send("Propiedad no definida");
-  //     }
-  // }
-  // res.status(404).send(" Usuario no encontrado. Introduce un valor existente para la propiedad "+propiedad);
 
-}
 
 function modificarArticulo(req, res, next) {
   Articulo.findById(req.params.id)
@@ -92,12 +73,61 @@ function eliminarArticulo(req, res, next) {
   }) 
   .catch(next); 
 }
+//funcion para obtener el autor del articulo sin mostrar el ibjeto autor como tal, sino más bien solo su nombre y apellidos
+function obtenerArticulosConAutor(req, res, next){
+  Articulo.aggregate([
+    {'$lookup': {
+      'from': 'usuarios',
+      'localField': 'idUsuario',
+      'foreignField': '_id',
+      'as': 'autor_object_inArray'
+    }},
+    {'$addFields': {
+      'AutorNombre': "$autor_object_inArray.nombre",
+      'AutorApellidos': "$autor_object_inArray.apellidos"
+    }},
+    {'$project': {
+      'autor_object_inArray':0,
+      'idUsuario': 0
+    }}
+  ])
+  .then(r=>{
+    res.status(200).send(r);
+  })
+  .catch(next);
+
+}
+
+function obtenerArticulosConEnfermedad(req, res, next){
+  Articulo.aggregate([
+    {'$lookup': {
+      'from': 'enfermedades',
+      'localField': 'idEnfermedad',
+      'foreignField': '_id',
+      'as': 'enfermedad_object_inArray'
+    }},
+    {'$addFields': {
+      'enfermedadNombre': "$enfermedad_object_inArray.nombre"
+    }},
+    {
+      '$project': {
+        'enfermedad_object_inArray': 0,
+        'idEnfermedad': 0
+      }
+    }
+  ])
+  .then(r=>{
+    res.status(200).send(r);
+  })
+  .catch(next);
+}
 
 // exportamos las funciones definidas
 module.exports = {
   crearArticulo,
   obtenerArticulos,
-  obtenerArticuloPorPropiedad,
   modificarArticulo,
-  eliminarArticulo
+  eliminarArticulo, 
+  obtenerArticulosConAutor,
+  obtenerArticulosConEnfermedad
 }
