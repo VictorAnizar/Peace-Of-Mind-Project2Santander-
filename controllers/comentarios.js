@@ -79,7 +79,6 @@ function getNumberOfReactions(req, res, next){
   }
   else{
     Comentario.find({'reacciones':maximo})
-    // .min({'reacciones':0}).max({'reacciones':5}).hint( { 'reacciones': 1 } )
     .then(coms=>{
       res.send(coms);
     })
