@@ -4,14 +4,16 @@ const router = require('express').Router();
 const {
     crearComentario,
     obtenerComentarios,
-    obtenerComentarioPorPropiedad,
     modificarComentario,
-    eliminarComentario
+    eliminarComentario,
+    isAnonimoComentario,
+    getNumberOfReactions
 } = require('../controllers/comentarios');
 
 router.get('/', obtenerComentarios);
-router.get('/:propiedad=:valor', obtenerComentarioPorPropiedad);
 router.get('/:id', obtenerComentarios);
+router.get('/anonimo/:valorBooleano', isAnonimoComentario);
+router.get('/cantidadMaxReacciones/:max', getNumberOfReactions);
 router.post('/', crearComentario);
 router.put('/:id', modificarComentario);
 router.delete('/:id', eliminarComentario);

@@ -29,26 +29,7 @@ function obtenerComentarios(req, res, next) {
   }
 }
 
-function obtenerComentarioPorPropiedad(req, res){
-  //se guardan en variables los valores mandados por url
-  // let valor = req.params.valor;
-  // let propiedad = req.params.propiedad;
-  // for (const key of Object.entries(usuarios)) {
-  //     //si por lo menos sabemos que el valor mandado para la propiedad existe
-  //     if (key[1][propiedad] ) {
-  //         if (key[1][propiedad] == valor) {
-  //         //se hace un filtro y se devuelve el json de la constelacion el cual contenga como propiedad
-  //         //el valor mandado
-  //         res.send(...key.filter(e => e[propiedad] == valor));
-  //         }
-  //     }
-  //     else{
-  //         res.status(404).send("Propiedad no definida");
-  //     }
-  // }
-  // res.status(404).send(" Usuario no encontrado. Introduce un valor existente para la propiedad "+propiedad);
 
-}
 
 function modificarComentario(req, res, next) {
   Comentario.findById(req.params.id)
@@ -79,12 +60,39 @@ function eliminarComentario(req, res, next) {
     .then(com=>{res.send("Registro eliminado")})
     .catch(next);
 }
+//funcion para obtener los comentarios que son anonimos o no dependiendo del valor booleano recibido
+function isAnonimoComentario(req, res, next){
+  let valorBooleano = req.params.valorBooleano;
+  Comentario.find({'anonimo': valorBooleano})
+  .then(coms=>{
+    res.send(coms);
+  })
+  .catch(next);
+}
+
+//funcion que devuelve comentarios con una cierta cantidad de comentarios
+function getNumberOfReactions(req, res, next){
+  let maximo=req.params.max;
+  
+  if (isNaN(maximo)) {
+    res.status(400).send("Solo se recibe un numero maximo")
+  }
+  else{
+    Comentario.find({'reacciones':maximo})
+    // .min({'reacciones':0}).max({'reacciones':5}).hint( { 'reacciones': 1 } )
+    .then(coms=>{
+      res.send(coms);
+    })
+    .catch(next);
+  }
+}
 
 // exportamos las funciones definidas
 module.exports = {
   crearComentario,
   obtenerComentarios,
-  obtenerComentarioPorPropiedad,
   modificarComentario,
-  eliminarComentario
+  eliminarComentario,
+  isAnonimoComentario,
+  getNumberOfReactions
 }

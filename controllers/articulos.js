@@ -97,7 +97,7 @@ function obtenerArticulosConAutor(req, res, next){
   .catch(next);
 
 }
-
+//funcion para obtener los articulos con la enfermedad unicamente (nombre y se expluye el id de la enfermedad)
 function obtenerArticulosConEnfermedad(req, res, next){
   Articulo.aggregate([
     {'$lookup': {
