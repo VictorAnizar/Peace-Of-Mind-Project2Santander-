@@ -24,8 +24,7 @@ require('./models/Articulo');
 //configuracion de las rutas
 app.use('/v1', require('./routes'));
 //decimos cómo/dónde se va a ejecutar la app
-//definimos el puerto 
-// const PORT = 3464;
+
 //activa la aplicacion y decimos qué debe de hacer
 app.listen(process.env.PORT, () => {
     console.log(`Server listening on port ${process.env.PORT}!`);

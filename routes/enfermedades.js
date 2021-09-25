@@ -6,11 +6,12 @@ const {
     obtenerEnfermedades,
     obtenerEnfermedadPorPropiedad,
     modificarEnfermedad,
-    eliminarEnfermedad
+    eliminarEnfermedad,
+    obtenerRegistrosCoincidenciaAtributos
 } = require('../controllers/enfermedades');
 
+router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerEnfermedades);
-router.get('/:propiedad=:valor', obtenerEnfermedadPorPropiedad);
 router.get('/:id', obtenerEnfermedades);
 router.post('/', crearEnfermedad);
 router.put('/:id', modificarEnfermedad);

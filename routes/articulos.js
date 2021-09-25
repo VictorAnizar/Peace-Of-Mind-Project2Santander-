@@ -7,9 +7,11 @@ const {
     modificarArticulo,
     eliminarArticulo,
     obtenerArticulosConAutor,
-    obtenerArticulosConEnfermedad
+    obtenerArticulosConEnfermedad,
+    obtenerRegistrosCoincidenciaAtributos
 } = require('../controllers/articulos');
 
+router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/getAutor/', obtenerArticulosConAutor);
 router.get('/getEnfermedadRelacionada/', obtenerArticulosConEnfermedad);
 router.get('/', obtenerArticulos);

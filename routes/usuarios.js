@@ -6,9 +6,11 @@ const {
     obtenerUsuarios,
     modificarUsuario,
     eliminarUsuario,
-    listarUsuariosPorTipo
+    listarUsuariosPorTipo,
+    obtenerRegistrosCoincidenciaAtributos
 } = require('../controllers/usuarios');
 
+router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerUsuarios);
 router.get('/:id', obtenerUsuarios);
 router.get('/tipo/:tipo', listarUsuariosPorTipo);

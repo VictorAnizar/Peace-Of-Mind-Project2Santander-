@@ -7,9 +7,11 @@ const {
     modificarComentario,
     eliminarComentario,
     isAnonimoComentario,
-    getNumberOfReactions
+    getNumberOfReactions,
+    obtenerRegistrosCoincidenciaAtributos
 } = require('../controllers/comentarios');
 
+router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerComentarios);
 router.get('/:id', obtenerComentarios);
 router.get('/anonimo/:valorBooleano', isAnonimoComentario);

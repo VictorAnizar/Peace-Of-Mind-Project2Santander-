@@ -85,11 +85,74 @@ function listarUsuariosPorTipo(req, res, next) {
     .catch((next));
 }
 
+//funcion para ver si en el atributo mandado esta contenida la frase que tiene la variable pasada por URL "valorContenido"
+function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
+  var atributo = req.params.atributo;
+  let valorContenido = req.params.valorContenido;
+  switch (atributo) {
+    case "nombre":
+
+      Usuario.find(
+        { 'nombre': { '$regex': req.params.valorContenido, '$options': 'i' } }
+      )
+        .then(arts => {
+          res.status(200).send(arts);
+        })
+        .catch(next);
+
+      break;
+
+    case "apellidos":
+
+      Usuario.find(
+        { 'apellidos': { '$regex': req.params.valorContenido, '$options': 'i' } }
+      )
+        .then(arts => {
+          res.status(200).send(arts);
+        })
+        .catch(next);
+
+      break;
+
+    case "usuario":
+
+      Usuario.find(
+        { 'usuario': { '$regex': req.params.valorContenido, '$options': 'i' } }
+      )
+        .then(arts => {
+          res.status(200).send(arts);
+        })
+        .catch(next);
+
+      break;
+
+
+    case "tipoUsuario":
+
+      Usuario.find(
+        { 'tipoUsuario': { '$regex': req.params.valorContenido, '$options': 'i' } }
+      )
+        .then(arts => {
+          res.status(200).send(arts);
+        })
+        .catch(next);
+
+      break;
+
+    default:
+      res.send("Atributo Desconocido " + atributo);
+  }
+
+
+}
+
+
 // exportamos las funciones definidas
 module.exports = {
   crearUsuario,
   obtenerUsuarios,
   modificarUsuario,
   eliminarUsuario,
-  listarUsuariosPorTipo
+  listarUsuariosPorTipo,
+  obtenerRegistrosCoincidenciaAtributos
 }

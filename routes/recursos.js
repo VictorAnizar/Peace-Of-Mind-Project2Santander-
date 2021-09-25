@@ -6,9 +6,11 @@ const {
     obtenerRecursos,
     modificarRecurso,
     eliminarRecurso,
-    listarRecursoPorTipo
+    listarRecursoPorTipo,
+    obtenerRegistrosCoincidenciaAtributos
 } = require('../controllers/recursos');
 
+router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerRecursos);
 router.get('/:id', obtenerRecursos);
 router.get('/tipo/:tipo', listarRecursoPorTipo);
