@@ -21,6 +21,8 @@ require('./models/Recurso');
 require('./models/Enfermedad');
 require('./models/Comentario');
 require('./models/Articulo');
+
+require('./config/passport')
 //configuracion de las rutas
 app.use('/v1', require('./routes'));
 //decimos cómo/dónde se va a ejecutar la app
