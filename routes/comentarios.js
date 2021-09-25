@@ -8,9 +8,11 @@ const {
     eliminarComentario,
     isAnonimoComentario,
     getNumberOfReactions,
-    obtenerRegistrosCoincidenciaAtributos
+    obtenerRegistrosCoincidenciaAtributos,
+    limitarNumeroRegistros
 } = require('../controllers/comentarios');
 
+router.get('/limite=:limit', limitarNumeroRegistros);
 router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerComentarios);
 router.get('/:id', obtenerComentarios);

@@ -147,6 +147,18 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
 }
 
 
+function limitarNumeroRegistros(req, res, next){
+  if (isNaN(req.params.limit)) {
+    res.send("Proporciona un numero")
+  }
+  let limite = parseInt(req.params.limit);
+  Usuario.find().limit(limite)
+  .then(usrs=>{
+    res.send(usrs)
+  })
+  .catch(next);
+}
+
 // exportamos las funciones definidas
 module.exports = {
   crearUsuario,
@@ -154,5 +166,6 @@ module.exports = {
   modificarUsuario,
   eliminarUsuario,
   listarUsuariosPorTipo,
-  obtenerRegistrosCoincidenciaAtributos
+  obtenerRegistrosCoincidenciaAtributos,
+  limitarNumeroRegistros
 }

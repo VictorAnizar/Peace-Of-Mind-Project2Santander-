@@ -8,9 +8,12 @@ const {
     eliminarArticulo,
     obtenerArticulosConAutor,
     obtenerArticulosConEnfermedad,
-    obtenerRegistrosCoincidenciaAtributos
+    obtenerRegistrosCoincidenciaAtributos,
+    limitarNumeroRegistros
 } = require('../controllers/articulos');
 
+
+router.get('/limite=:limit', limitarNumeroRegistros);
 router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/getAutor/', obtenerArticulosConAutor);
 router.get('/getEnfermedadRelacionada/', obtenerArticulosConEnfermedad);

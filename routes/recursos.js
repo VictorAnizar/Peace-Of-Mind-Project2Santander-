@@ -7,9 +7,11 @@ const {
     modificarRecurso,
     eliminarRecurso,
     listarRecursoPorTipo,
-    obtenerRegistrosCoincidenciaAtributos
+    obtenerRegistrosCoincidenciaAtributos,
+    limitarNumeroRegistros
 } = require('../controllers/recursos');
 
+router.get('/limite=:limit', limitarNumeroRegistros);
 router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerRecursos);
 router.get('/:id', obtenerRecursos);

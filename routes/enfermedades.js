@@ -4,12 +4,13 @@ const router = require('express').Router();
 const {
     crearEnfermedad,
     obtenerEnfermedades,
-    obtenerEnfermedadPorPropiedad,
     modificarEnfermedad,
     eliminarEnfermedad,
-    obtenerRegistrosCoincidenciaAtributos
+    obtenerRegistrosCoincidenciaAtributos,
+    limitarNumeroRegistros
 } = require('../controllers/enfermedades');
 
+router.get('/limite=:limit', limitarNumeroRegistros);
 router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerEnfermedades);
 router.get('/:id', obtenerEnfermedades);

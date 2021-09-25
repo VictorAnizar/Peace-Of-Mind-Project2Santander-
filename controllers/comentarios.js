@@ -134,6 +134,18 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
 }
 
 
+function limitarNumeroRegistros(req, res, next){
+  if (isNaN(req.params.limit)) {
+    res.send("Proporciona un numero")
+  }
+  let limite = parseInt(req.params.limit);
+  Comentario.find().limit(limite)
+  .then(coms=>{
+    res.send(coms)
+  })
+  .catch(next);
+}
+
 // exportamos las funciones definidas
 module.exports = {
   crearComentario,
@@ -142,5 +154,6 @@ module.exports = {
   eliminarComentario,
   isAnonimoComentario,
   getNumberOfReactions,
-  obtenerRegistrosCoincidenciaAtributos
+  obtenerRegistrosCoincidenciaAtributos,
+  limitarNumeroRegistros
 }

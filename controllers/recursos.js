@@ -130,6 +130,20 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
   }
 
 
+
+
+}
+
+function limitarNumeroRegistros(req, res, next){
+  if (isNaN(req.params.limit)) {
+    res.send("Proporciona un numero")
+  }
+  let limite = parseInt(req.params.limit);
+  Recurso.find().limit(limite)
+  .then(recs=>{
+    res.send(recs)
+  })
+  .catch(next);
 }
 
 // exportamos las funciones definidas
@@ -139,5 +153,6 @@ module.exports = {
   modificarRecurso,
   eliminarRecurso,
   listarRecursoPorTipo,
-  obtenerRegistrosCoincidenciaAtributos
+  obtenerRegistrosCoincidenciaAtributos,
+  limitarNumeroRegistros
 }

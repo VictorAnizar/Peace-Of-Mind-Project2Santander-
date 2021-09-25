@@ -136,6 +136,18 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
 }
 
 
+function limitarNumeroRegistros(req, res, next){
+  if (isNaN(req.params.limit)) {
+    res.send("Proporciona un numero")
+  }
+  let limite = parseInt(req.params.limit);
+  Enfermedad.find().limit(limite)
+  .then(enfs=>{
+    res.send(enfs)
+  })
+  .catch(next);
+}
+
 // exportamos las funciones definidas
 module.exports = {
   crearEnfermedad,
@@ -143,5 +155,6 @@ module.exports = {
   obtenerEnfermedadPorPropiedad,
   modificarEnfermedad,
   eliminarEnfermedad,
-  obtenerRegistrosCoincidenciaAtributos
+  obtenerRegistrosCoincidenciaAtributos,
+  limitarNumeroRegistros
 }
