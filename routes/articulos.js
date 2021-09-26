@@ -9,12 +9,14 @@ const {
     obtenerArticulosConAutor,
     obtenerArticulosConEnfermedad,
     obtenerRegistrosCoincidenciaAtributos,
-    limitarNumeroRegistros
+    limitarNumeroRegistros,
+    listarSolo
 } = require('../controllers/articulos');
 
 const auth = require('./auth')
 
 
+router.get('/listarSolo/:soloMuestra', listarSolo);
 router.get('/limite=:limit', limitarNumeroRegistros);
 router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/getAutor/', obtenerArticulosConAutor);

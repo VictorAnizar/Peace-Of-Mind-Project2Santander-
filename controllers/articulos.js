@@ -190,6 +190,105 @@ function limitarNumeroRegistros(req, res, next){
   .catch(next);
 }
 
+
+//Esta funcion es para mostrar solo los atributos mandados por el usuario.
+//Por el momento es Muy poco eficiente pues hace muchas comparativas. En futuras versiones se optimizará el rendimiento.
+//Sé que esta función es mero código espagueti D:
+function listarSolo(req, res, next){
+  let stringConAttrs = req.params.soloMuestra;
+  //SI se quieren ver los 3
+  if((stringConAttrs).includes("texto") && (stringConAttrs).includes("titulo") && (stringConAttrs).includes("referencias") ){
+    Articulo.aggregate([
+      {'$project':{
+        'texto':1,
+        'titulo':1,
+        'referencias':1
+      }}
+    ]).then(coms=>{
+      res.send(coms)
+    })
+    .catch(next);
+
+  }else
+  //SI se quieren ver 2
+   if (
+    (stringConAttrs).includes("texto") && (stringConAttrs).includes("titulo")  
+  ){
+    Articulo.aggregate([
+      {'$project':{
+        'texto':1,
+        'titulo':1,
+      }}
+    ]).then(coms=>{
+      res.send(coms)
+    })
+    .catch(next);
+
+  }else if (
+    (stringConAttrs).includes("texto") && (stringConAttrs).includes("referencias")  
+  ){
+    Articulo.aggregate([
+      {'$project':{
+        'texto':1,
+        'referencias':1
+      }}
+    ]).then(coms=>{
+      res.send(coms)
+    })
+    .catch(next);
+  }
+  else if (
+    (stringConAttrs).includes("referencias") && (stringConAttrs).includes("titulo")  
+  ){
+    Articulo.aggregate([
+      {'$project':{
+        'referencias':1,
+        'titulo':1
+      }}
+    ]).then(coms=>{
+      res.send(coms)
+    })
+    .catch(next);
+  }
+  //Si solo se busca un atributo
+  else if (
+    (stringConAttrs).includes("titulo")  
+  ){
+    Articulo.aggregate([
+      {'$project':{
+        'titulo':1
+      }}
+    ]).then(coms=>{
+      res.send(coms)
+    })
+    .catch(next);
+  }
+  else if (
+    (stringConAttrs).includes("texto")  
+  ){
+    Articulo.aggregate([
+      {'$project':{
+        'texto':1
+      }}
+    ]).then(coms=>{
+      res.send(coms)
+    })
+    .catch(next);
+  }
+  else if (
+    (stringConAttrs).includes("referencias")  
+  ){
+    Articulo.aggregate([
+      {'$project':{
+        'referencias':1
+      }}
+    ]).then(coms=>{
+      res.send(coms)
+    })
+    .catch(next);
+  }
+}
+
 // exportamos las funciones definidas
 module.exports = {
   crearArticulo,
@@ -199,5 +298,6 @@ module.exports = {
   obtenerArticulosConAutor,
   obtenerArticulosConEnfermedad,
   obtenerRegistrosCoincidenciaAtributos,
-  limitarNumeroRegistros
+  limitarNumeroRegistros,
+  listarSolo
 }
