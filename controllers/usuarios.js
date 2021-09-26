@@ -157,16 +157,16 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
 }
 
 
-function limitarNumeroRegistros(req, res, next){
+function limitarNumeroRegistros(req, res, next) {
   if (isNaN(req.params.limit)) {
     res.send("Proporciona un numero")
   }
   let limite = parseInt(req.params.limit);
   Usuario.find().limit(limite)
-  .then(usrs=>{
-    res.send(usrs)
-  })
-  .catch(next);
+    .then(usrs => {
+      res.send(usrs)
+    })
+    .catch(next);
 }
 //funcion para iniciar sesion 
 function iniciarSesion(req, res, next) {
@@ -179,7 +179,12 @@ function iniciarSesion(req, res, next) {
     function (err, user, info) {
       if (err) { return next(err) }
       if (user) {
-        user.token = user.generaJWT();
+        if (user.validarPassword(req.body.password)) {
+          user.token = user.generaJWT();
+          return res.status(200).json(user.token);
+        }else {
+          return res.status(422).json({ error: { password: "Password" } });
+        }
       } else {
         return res.status(422).json(info);
       }
