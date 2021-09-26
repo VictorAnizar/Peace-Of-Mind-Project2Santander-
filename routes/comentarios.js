@@ -12,6 +12,8 @@ const {
     limitarNumeroRegistros
 } = require('../controllers/comentarios');
 
+const auth = require('./auth')
+
 router.get('/limite=:limit', limitarNumeroRegistros);
 router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerComentarios);

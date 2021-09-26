@@ -10,6 +10,8 @@ const {
     limitarNumeroRegistros
 } = require('../controllers/enfermedades');
 
+const auth = require('./auth')
+
 router.get('/limite=:limit', limitarNumeroRegistros);
 router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerEnfermedades);

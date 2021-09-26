@@ -170,8 +170,8 @@ function limitarNumeroRegistros(req, res, next){
 }
 //funcion para iniciar sesion 
 function iniciarSesion(req, res, next) {
-  if (!req.body.email || !req.body.password) {
-    return res.status(422).json({ error: { email: "Falta informacion" } })
+  if (!req.body.usuario || !req.body.password) {
+    return res.status(422).json({ error: { usuario: "Falta informacion" } })
   }
 
   passport.authenticate('local',
