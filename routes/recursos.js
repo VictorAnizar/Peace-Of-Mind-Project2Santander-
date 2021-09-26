@@ -16,8 +16,8 @@ router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
 router.get('/', obtenerRecursos);
 router.get('/:id', obtenerRecursos);
 router.get('/tipo/:tipo', listarRecursoPorTipo);
-router.post('/', crearRecurso);
-router.put('/:id', modificarRecurso);
-router.delete('/:id', eliminarRecurso);
+router.post('/', auth.requerido, crearRecurso);
+router.put('/:id', auth.requerido, modificarRecurso);
+router.delete('/:id', auth.requerido, eliminarRecurso);
 
 module.exports = router; 

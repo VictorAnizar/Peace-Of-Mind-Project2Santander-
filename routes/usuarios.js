@@ -15,7 +15,7 @@ const {
 router.get('/limite=:limit', limitarNumeroRegistros);
 const auth = require('./auth')
 
-router.get('/:atributo=:valorContenido', obtenerRegistrosCoincidenciaAtributos);
+router.get('/:atributo=:valorContenido', auth.requerido, obtenerRegistrosCoincidenciaAtributos);
 router.get('/', auth.requerido, obtenerUsuarios);
 router.get('/:id', auth.requerido, obtenerUsuarios);
 router.get('/tipo/:tipo', listarUsuariosPorTipo);

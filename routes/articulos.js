@@ -19,8 +19,8 @@ router.get('/getAutor/', obtenerArticulosConAutor);
 router.get('/getEnfermedadRelacionada/', obtenerArticulosConEnfermedad);
 router.get('/', obtenerArticulos);
 router.get('/:id', obtenerArticulos);
-router.post('/', crearArticulo);
-router.put('/:id', modificarArticulo);
-router.delete('/:id', eliminarArticulo);
+router.post('/', auth.requerido, crearArticulo);
+router.put('/:id', auth.requerido, modificarArticulo);
+router.delete('/:id', auth.requerido, eliminarArticulo);
 
 module.exports = router; 

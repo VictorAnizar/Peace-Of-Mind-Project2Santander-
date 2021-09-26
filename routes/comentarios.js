@@ -18,8 +18,8 @@ router.get('/', obtenerComentarios);
 router.get('/:id', obtenerComentarios);
 router.get('/anonimo/:valorBooleano', isAnonimoComentario);
 router.get('/cantidadMaxReacciones/:max', getNumberOfReactions);
-router.post('/', crearComentario);
-router.put('/:id', modificarComentario);
-router.delete('/:id', eliminarComentario);
+router.post('/', auth.requerido, crearComentario);
+router.put('/:id', auth.requerido, modificarComentario);
+router.delete('/:id', auth.requerido, eliminarComentario);
 
 module.exports = router; 
