@@ -27,7 +27,10 @@ function obtenerUsuarios(req, res, next) {
     Usuario.findById(req.params.id)
       //Si sale bien, se manda el registro
       .then(
-        usr => { res.send(usr) }
+        usr => {
+          userfinal = new Usuario(usr)
+          res.send(userfinal.onlyPublicData(usr))
+        }
       )
       //Si sale mal se deja que mongoose responda
       .catch(next);
@@ -35,7 +38,11 @@ function obtenerUsuarios(req, res, next) {
   else {
     Usuario.find()
       //Si sale bien, se regresan los datos
-      .then(usrs => res.send(usrs))
+      .then(
+        usr => {
+          userfinal = new Usuario(usr)
+          res.send(userfinal.onlyPublicDataall(usr))
+        })
       //Si sale mal, mongoose responde
       .catch((next));
   }
@@ -90,8 +97,11 @@ function eliminarUsuario(req, res, next) {
 
 function listarUsuariosPorTipo(req, res, next) {
   Usuario.find({ 'tipoUsuario': req.params.tipo })
-    .then(usrs => res.send(usrs))
-    //Si sale mal, mongoose responde
+    .then(
+      usr => {
+        userfinal = new Usuario(usr)
+        res.send(userfinal.onlyPublicDataall(usr))
+      })    //Si sale mal, mongoose responde
     .catch((next));
 }
 
@@ -105,9 +115,11 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
       Usuario.find(
         { 'nombre': { '$regex': req.params.valorContenido, '$options': 'i' } }
       )
-        .then(arts => {
-          res.status(200).send(arts);
-        })
+        .then(
+          usr => {
+            userfinal = new Usuario(usr)
+            res.send(userfinal.onlyPublicDataall(usr))
+          })
         .catch(next);
 
       break;
@@ -117,9 +129,11 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
       Usuario.find(
         { 'apellidos': { '$regex': req.params.valorContenido, '$options': 'i' } }
       )
-        .then(arts => {
-          res.status(200).send(arts);
-        })
+        .then(
+          usr => {
+            userfinal = new Usuario(usr)
+            res.send(userfinal.onlyPublicDataall(usr))
+          })
         .catch(next);
 
       break;
@@ -129,9 +143,11 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
       Usuario.find(
         { 'usuario': { '$regex': req.params.valorContenido, '$options': 'i' } }
       )
-        .then(arts => {
-          res.status(200).send(arts);
-        })
+        .then(
+          usr => {
+            userfinal = new Usuario(usr)
+            res.send(userfinal.onlyPublicDataall(usr))
+          })
         .catch(next);
 
       break;
@@ -142,9 +158,11 @@ function obtenerRegistrosCoincidenciaAtributos(req, res, next) {
       Usuario.find(
         { 'tipoUsuario': { '$regex': req.params.valorContenido, '$options': 'i' } }
       )
-        .then(arts => {
-          res.status(200).send(arts);
-        })
+        .then(
+          usr => {
+            userfinal = new Usuario(usr)
+            res.send(userfinal.onlyPublicDataall(usr))
+          })
         .catch(next);
 
       break;
@@ -163,9 +181,11 @@ function limitarNumeroRegistros(req, res, next) {
   }
   let limite = parseInt(req.params.limit);
   Usuario.find().limit(limite)
-    .then(usrs => {
-      res.send(usrs)
-    })
+    .then(
+      usr => {
+        userfinal = new Usuario(usr)
+        res.send(userfinal.onlyPublicDataall(usr))
+      })
     .catch(next);
 }
 //funcion para iniciar sesion 
@@ -182,7 +202,7 @@ function iniciarSesion(req, res, next) {
         if (user.validarPassword(req.body.password)) {
           user.token = user.generaJWT();
           return res.status(200).json(user.token);
-        }else {
+        } else {
           return res.status(422).json({ error: { password: "Password" } });
         }
       } else {
