@@ -56,7 +56,11 @@ UsuarioScheme.methods.generaJWT = function () {
 
 UsuarioScheme.methods.toAuthJSON = function () {
   return {
+    id: this.id,
+    nombre: this.nombre,
+    apellidos: this.apellidos,
     usuario: this.usuario,
+    tipoUsuario: this.tipoUsuario,
     token: this.generaJWT()
   }
 }
