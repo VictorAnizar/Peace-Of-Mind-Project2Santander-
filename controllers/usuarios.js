@@ -200,8 +200,7 @@ function iniciarSesion(req, res, next) {
       if (err) { return next(err) }
       if (user) {
         if (user.validarPassword(req.body.password)) {
-          user.token = user.generaJWT();
-          return res.status(200).json(user.token);
+          return res.status(200).json(user.toAuthJSON());
         } else {
           return res.status(422).json({ error: { password: "Password" } });
         }
